@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Build creates Hubtel.Private.config if missing. Enter credentials ONLY in
+     that private file or the server's environment variables, never this example.
+     SMS and payment API accounts may have DIFFERENT credentials. -->
+<appSettings>
+  <add key="HubtelSmsApiUrl" value="https://smsc.hubtel.com/v1/messages/send" />
+  <add key="HubtelSmsClientId" value="" />
+  <add key="HubtelSmsClientSecret" value="" />
+  <add key="HubtelSmsSenderId" value="" />
+  <add key="HubtelPaymentsEnabled" value="false" />
+  <add key="HubtelPaymentClientId" value="" />
+  <add key="HubtelPaymentClientSecret" value="" />
+  <add key="HubtelMerchantAccountNumber" value="" />
+  <add key="HubtelPaymentFee" value="150.00" />
+  <!-- Intended hostname requested by the owner; DNS/hosting are NOT verified. -->
+  <add key="PublicApplicationBaseUrl" value="https://report.policebackground.com/" />
+</appSettings>

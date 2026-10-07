@@ -1,0 +1,1 @@
+<%@ WebHandler Language="C#" CodeBehind="ApplicationDocument.ashx.cs" Class="PoliceBackgroundCheckSystem.ApplicationDocument" %>

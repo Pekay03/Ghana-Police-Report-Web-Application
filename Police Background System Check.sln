@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{349C5851-65DF-11DA-9384-00065B846F21}") = "Police Background System Check", "Police Background System Check.csproj", "{FEAEDE31-4C35-452E-A3C3-726F29DF17DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEAEDE31-4C35-452E-A3C3-726F29DF17DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAEDE31-4C35-452E-A3C3-726F29DF17DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAEDE31-4C35-452E-A3C3-726F29DF17DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAEDE31-4C35-452E-A3C3-726F29DF17DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

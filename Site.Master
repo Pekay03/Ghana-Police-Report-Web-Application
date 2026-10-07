@@ -1,0 +1,365 @@
+﻿<%@ Master Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="PoliceBackgroundCheckSystem.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        <asp:ContentPlaceHolder
+            ID="TitleContent"
+            runat="server">
+            Ghana Police Background Check System
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <style type="text/css">
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #102a43;
+        }
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            background: #0b3b78;
+            color: white;
+            min-height: 70px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* =====================================================
+           BRAND
+        ===================================================== */
+
+        .brand {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .brand:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .brand-subtitle {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 3px;
+        }
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: opacity .2s ease;
+        }
+
+        .navigation a:hover {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        /* =====================================================
+           LOGGED-IN USER
+        ===================================================== */
+
+        .logged-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-info {
+            text-align: right;
+        }
+
+        .user-name {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .user-role {
+            display: block;
+            font-size: 10px;
+            opacity: 0.8;
+            margin-top: 3px;
+        }
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .site-main {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 25px 50px;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            color: #7b8794;
+            font-size: 12px;
+            background: #f4f7fb;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media screen and (max-width: 700px) {
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .navigation {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .logged-user {
+                justify-content: center;
+            }
+
+            .user-info {
+                text-align: center;
+            }
+
+            .site-main {
+                padding: 20px 15px 40px;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+
+            .brand {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .header-container {
+                padding: 15px 10px;
+            }
+
+            .navigation {
+                gap: 10px;
+            }
+        }
+
+    </style>
+
+    <!-- =====================================================
+         CHILD PAGE HEAD CONTENT
+
+         SubmitApplication.aspx uses this placeholder for
+         its page-specific CSS and JavaScript.
+    ====================================================== -->
+
+    <asp:ContentPlaceHolder
+        ID="HeadContent"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="~/Content/PoliceTheme.css" rel="stylesheet" runat="server" />
+
+</head>
+
+<body>
+
+<form id="form1"
+      runat="server">
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <!-- =================================================
+                 BRAND
+            ================================================== -->
+
+            <a href="Default.aspx"
+               class="brand">
+
+                Ghana Police Background Check
+
+                <span class="brand-subtitle">
+                    Ghana Police Service
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 LOGGED-OUT NAVIGATION
+            ================================================== -->
+
+            <div id="NavLinks"
+                 runat="server"
+                 class="navigation">
+
+                <a href="Default.aspx">
+                    Home
+                </a>
+
+                <a href="Login.aspx">
+                    Sign In
+                </a>
+
+                <a href="Register.aspx">
+                    Create Account
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 LOGGED-IN NAVIGATION
+            ================================================== -->
+
+            <div id="NavLinksLoggedIn"
+                 runat="server"
+                 class="navigation logged-user"
+                 visible="false">
+
+                <div class="user-info">
+
+                    <span id="ltrUser"
+                          runat="server"
+                          class="user-name">
+                    </span>
+
+                    <span id="ltrRole"
+                          runat="server"
+                          class="user-role">
+                    </span>
+
+                </div>
+
+
+                <a id="DashboardLink"
+                   runat="server"
+                   href="SubmitApplication.aspx">
+
+                    My Applications
+
+                </a>
+
+
+                <a href="Login.aspx?logout=true">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+
+         IMPORTANT:
+         SubmitApplication.aspx places its entire page inside
+         this MainContent placeholder.
+    ===================================================== -->
+
+    <main class="site-main">
+
+        <asp:ContentPlaceHolder
+            ID="MainContent"
+            runat="server">
+        </asp:ContentPlaceHolder>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="site-footer">
+
+        Ghana Police Background Check System
+        &copy; 2026
+
+    </footer>
+
+
+</form>
+
+</body>
+
+</html>

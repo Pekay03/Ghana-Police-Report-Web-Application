@@ -1,0 +1,16 @@
+# Private machine-specific connections. Build creates the local file from its example.
+/Web.Local.config
+/Hubtel.Private.config
+/Web.Production.config
+*.config.bak
+*.config.backup*
+*.pubxml.user
+
+# Visual Studio/generated output.
+/.vs/
+/bin/
+/obj/
+*.user
+*.suo
+App_Data/
+Uploads/

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Build copies this safe example to Web.Local.config only if that file is missing.
+     Enter real credentials ONLY in Web.Local.config. Never edit this example. -->
+<connectionStrings>
+  <add name="PoliceReportDB"
+       connectionString="Server=127.0.0.1;Port=3306;Database=pbcswa_db;Uid=YOUR_MYSQL_USERNAME;Pwd=YOUR_MYSQL_PASSWORD;"
+       providerName="MySql.Data.MySqlClient" />
+</connectionStrings>

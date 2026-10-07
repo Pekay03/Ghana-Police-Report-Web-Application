@@ -1,0 +1,206 @@
+{
+  "type": "focused source overlay",
+  "files": [
+    {
+      "path": "AdminDashboard.aspx",
+      "bytes": 83213,
+      "sha256": "3d30164d58b286d141e04853a3a918220a359dd0d482fca113da2d90832dea37"
+    },
+    {
+      "path": "AdminDashboard.aspx.cs",
+      "bytes": 48443,
+      "sha256": "0d8402076ad7f530057562dbd3a5980e09134c0d2950beeb10dc30f3c743e7c8"
+    },
+    {
+      "path": "AdminDashboard.aspx.designer.cs",
+      "bytes": 31751,
+      "sha256": "1c6395a2e1d7dc3584f6d0e27fd216bd3b4146e05b0138c4542644e90464ab42"
+    },
+    {
+      "path": "AdminFeatures.mysql.sql",
+      "bytes": 15695,
+      "sha256": "78caf0fb546ada82585b47127a284db5423b958d4be45c4c3c4c8bf395af8cf1"
+    },
+    {
+      "path": "AdminOperations.ascx",
+      "bytes": 25866,
+      "sha256": "2bc1685c0d895d5264716e5b58c5d7062a282ebdf5538bae7fc45d087f7197e2"
+    },
+    {
+      "path": "AdminOperations.ascx.cs",
+      "bytes": 20743,
+      "sha256": "1776e2c8c1b6f3442fc15d6af7cb48201ccc8c8888c36c5a6f485a6b8294fd68"
+    },
+    {
+      "path": "AdminOperations.ascx.designer.cs",
+      "bytes": 3173,
+      "sha256": "c0cafbd1d8affd4cd0d7e1c2aabed8f1c392bfe9d4c9ff9fde036d1369b5921c"
+    },
+    {
+      "path": "AdminWorkflowService.cs",
+      "bytes": 17236,
+      "sha256": "34992485a0a06f44bb09a0bec983a24e9db41c9eec2841acef922910c01805cf"
+    },
+    {
+      "path": "ApplicationDocumentCatalog.cs",
+      "bytes": 3352,
+      "sha256": "9ccb5b2f8469febabdf4b76de83396cd8a43662aaf9d5b27edd7aef5e665e35c"
+    },
+    {
+      "path": "ApplicationManagement.ascx",
+      "bytes": 5352,
+      "sha256": "733ed1ed52c039339f9b04b844bfe80b9c49cb35cc843b4b9920fd818153917f"
+    },
+    {
+      "path": "ApplicationManagement.ascx.cs",
+      "bytes": 7369,
+      "sha256": "3e254f28b589aa06a05848723ee756fb78f69b60b3fc116de60aeb6ff9b81d30"
+    },
+    {
+      "path": "ApplicationManagement.ascx.designer.cs",
+      "bytes": 1038,
+      "sha256": "e02951d42565135b702a3c101a9ff764c898e791e1a7c8f511a4d6d438ef9eb1"
+    },
+    {
+      "path": "DatabaseHelper.cs",
+      "bytes": 55833,
+      "sha256": "b686dd8694cbab78222dc796b8fe53c4cd2642414e05266f93b38f683a264024"
+    },
+    {
+      "path": "HubtelSmsService.cs",
+      "bytes": 11275,
+      "sha256": "a687320ee9e6f3f0da373a8e06064e86f313213869d1683f4eb8f1c58b5c5f4c"
+    },
+    {
+      "path": "IdentityReview.ascx.cs",
+      "bytes": 14621,
+      "sha256": "3f936bdb5979159acdc9ed837223a84ab9a08062a27f7b459f13254a07df61f0"
+    },
+    {
+      "path": "IndividualDocumentReviewStore.cs",
+      "bytes": 10032,
+      "sha256": "bc63cbaf5edf0f2f27944c199cdeb4e1d2e97031e6a58f6631f194fff02f1818"
+    },
+    {
+      "path": "Police Background System Check.csproj",
+      "bytes": 29813,
+      "sha256": "69e19ea29b1fccdc63c415f15b0b89337356f1bc3bcb41030cf591ce0eb44aa1"
+    },
+    {
+      "path": "README-ADMIN-FEATURES.md",
+      "bytes": 8728,
+      "sha256": "94ab2512cf8d6a3387d45cbdc786ec0196071c4dee8f116b71bd5d5acf2ab243"
+    },
+    {
+      "path": "Register.aspx.cs",
+      "bytes": 12464,
+      "sha256": "eba764d5c8d6833ed76faa4ea0dbc432b8636727d32edb3230ad6cdbccb858e0"
+    },
+    {
+      "path": "SmsDeliveryTracking.cs",
+      "bytes": 2564,
+      "sha256": "75e440ddc3cb2fa73a1b1b93b33fefbe3bccb2aa0ac852156eeab14cd9c4883b"
+    },
+    {
+      "path": "SmsTracking.ascx",
+      "bytes": 5907,
+      "sha256": "f869e98529055a3d46458dfb79fc4f27beb75028dabd16a1b93f639dfcf40026"
+    },
+    {
+      "path": "SmsTracking.ascx.cs",
+      "bytes": 3588,
+      "sha256": "15081e9443b82436796e84561ee4f313ceebc4fdde3c73555f0f0b98f48ae817"
+    },
+    {
+      "path": "SmsTracking.ascx.designer.cs",
+      "bytes": 540,
+      "sha256": "d1d1cdc07af5f5561f3afebadb4745f863800df892e2b187501ed2b201f77076"
+    },
+    {
+      "path": "StaffAccess.cs",
+      "bytes": 3197,
+      "sha256": "9903dcea7ee62684c7a025b52af7225273a75f54feb8f3a50eeabcd87bf553c2"
+    },
+    {
+      "path": "StaffProfiles.ascx",
+      "bytes": 6780,
+      "sha256": "94234a1b810d034eed6bc8231a16a6d4e06091b44db5c93d1ee61391e944e9f7"
+    },
+    {
+      "path": "StaffProfiles.ascx.cs",
+      "bytes": 7494,
+      "sha256": "86d121231ff4b52a1d91fa7394ab7efd91519612bbb315aaf336c9a3541c7865"
+    },
+    {
+      "path": "StaffProfiles.ascx.designer.cs",
+      "bytes": 1614,
+      "sha256": "b9ad90e3e11778335d105a1f9138b9b9bb556c3e4744a972d13388d4f0e72963"
+    },
+    {
+      "path": "SubmitApplication.aspx.cs",
+      "bytes": 82638,
+      "sha256": "e7c122c34f5be50f9f22fc5a15310552aa564163183a050198f12e29af63aa0c"
+    },
+    {
+      "path": "Tests/AdminFeatureContractChecks.cs",
+      "bytes": 3172,
+      "sha256": "b82a618f2e3a2843fecee0f7f7ac707d223974b215e4be00b44fe61fc5111270"
+    },
+    {
+      "path": "Tests/HubtelContractChecks.cs",
+      "bytes": 5045,
+      "sha256": "5e30467fde33d1a12e1b78d7b5478d5e3a0b5e5dfe7b0230c15b88c56b930d50"
+    },
+    {
+      "path": "Tests/IndividualDocumentReviewChecks.cs",
+      "bytes": 8233,
+      "sha256": "a595ff3c2866cd1946c226774d193e8ef8ee46f7a53b7290f399abc008d2abca"
+    },
+    {
+      "path": "Tests/ModuleContractChecks.cs",
+      "bytes": 2460,
+      "sha256": "456dd24f4078fd6face6ba474d72442e29bbee72dbc2152f184e42771f53a280"
+    },
+    {
+      "path": "Tests/check-admin-feature-contracts.py",
+      "bytes": 5283,
+      "sha256": "94bd8e4a4b718cc1c1557da2c564f065bb57476b4fe299c4339f4b2c5c1d91d2"
+    },
+    {
+      "path": "Tests/check-individual-review-contracts.py",
+      "bytes": 4650,
+      "sha256": "dc6d7993c5f9ec1181d6f59821a26147a9c103469971fa18f2dc9d167c48dea1"
+    },
+    {
+      "path": "Tests/check-module-markup.py",
+      "bytes": 4181,
+      "sha256": "d5bed90d95733440d9dca9c60c22ba213341de5029b6693540b64a4b52d3209d"
+    },
+    {
+      "path": "Tests/check-upload-visibility.js",
+      "bytes": 2934,
+      "sha256": "218866ea0c83465ec9dfa0493fa2d41c3de0aa60e01f38857d3278184f65c465"
+    },
+    {
+      "path": "Tests/verify-dotnet-source.py",
+      "bytes": 4698,
+      "sha256": "9ef9363f636dcf2aeb2ed20f041be1abeead210b095ae3ae24cb788a505b15e9"
+    },
+    {
+      "path": "VerifyPhone.aspx.cs",
+      "bytes": 5342,
+      "sha256": "2c9e7c3d51cf911eaf8b760206f3a2235fa76cc11f4a8f3182ca2bcb661b8d9d"
+    },
+    {
+      "path": "VettingDashboard.aspx.cs",
+      "bytes": 152472,
+      "sha256": "4f2a78ed9680a6137fd7077790adf00efdcdd799e8dd169a8899f699d1d5a667"
+    },
+    {
+      "path": "VettingDetails.aspx.cs",
+      "bytes": 24138,
+      "sha256": "242c13df91c2a1dd899a74de07b5fd0d14b836ff93d83b2ed7e536c9e8a7226b"
+    }
+  ],
+  "runtimeVerification": "Pending: Windows/IIS, live MySQL and Hubtel delivery receipts"
+}
