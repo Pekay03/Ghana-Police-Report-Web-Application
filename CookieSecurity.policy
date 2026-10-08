@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- External HttpCookiesSection: same security settings as the working project.
+     Kept outside Web.config's older editor schema; validated by the package checks. -->
+<httpCookies httpOnlyCookies="true" requireSSL="true" sameSite="Lax" />

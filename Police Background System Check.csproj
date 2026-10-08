@@ -148,8 +148,8 @@
     <Content Include="ApplicationManagement.ascx" />
     <Content Include="StaffProfiles.ascx" />
     <Content Include="SmsTracking.ascx" />
-    <None Include="AdminFeatures.mysql.sql" />
     <Content Include="IdentityReview.ascx" />
+    <Content Include="CookieSecurity.policy" />
     <Content Include="IdentityReview.aspx" />
     <Content Include="CertificateManagement.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -170,7 +170,6 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\PoliceTheme.css" />
-    <None Include="DatabaseMigration.mysql" />
     <Content Include="ApplicationDocument.ashx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -455,7 +454,6 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="packages.config" />
     <None Include="NuGet.Config" />
-    <None Include="Web.config.template" />
     <None Include="Web.Local.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -469,11 +467,19 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.Somee.config">
+    <None Include="Web.MonsterASP.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Properties\PublishProfiles\Somee.pubxml" />
-    <None Include="Deployment\verify-somee-publish.py" />
+    <None Include="Properties\PublishProfiles\MonsterASP.pubxml" />
+    <None Include="Web.Production.config.example" />
+    <None Include="Web.Production.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\packages.xsd" />
+    <None Include="MONSTERASP-DEPLOYMENT.md" />
+    <ExcludeFromPackageFiles Include="Web.Production.config">
+      <FromTarget>Private hosting database credentials are provisioned separately.</FromTarget>
+    </ExcludeFromPackageFiles>
     <None Include=".gitignore" />
     <ExcludeFromPackageFiles Include="Web.Local.config">
       <FromTarget>Private local database credentials are not deployable content.</FromTarget>
@@ -497,10 +503,17 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
+    <!-- ResolveAssemblyReference must read the ASP.NET runtime redirects. -->
+    <AppConfig>$(MSBuildProjectDirectory)\Web.config</AppConfig>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets')" />
+  <Target Name="ValidateWebFormsBuildTools" BeforeTargets="PrepareForBuild">
+    <Error Condition="'$(MSBuildRuntimeType)' == 'Core'"
+           Text="This is ASP.NET Web Forms on .NET Framework 4.8, not ASP.NET Core. Build and publish with Windows Visual Studio/MSBuild plus Web development build tools. For MonsterASP, upload the compiled PoliceBackgroundSystem_MonsterASP_Website.zip into /wwwroot using File Manager; do not submit this source project to the dotnet SDK Git/source builder." />
+    <Error Condition="'$(MSBuildRuntimeType)' != 'Core' And !Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets')"
+           Text="Install Visual Studio ASP.NET and web development (or Build Tools Web development build tools) and the .NET Framework 4.8 targeting pack. Run that installation's MSBuild.exe, not dotnet build. See MONSTERASP-DEPLOYMENT.md." />
+  </Target>
   <Target Name="EnsureLocalDatabaseConfiguration" BeforeTargets="BeforeBuild" Condition="!Exists('$(MSBuildProjectDirectory)\Web.Local.config')">
     <Copy SourceFiles="$(MSBuildProjectDirectory)\Web.Local.config.example" DestinationFiles="$(MSBuildProjectDirectory)\Web.Local.config" />
     <Message Importance="High" Text="Created Web.Local.config with safe placeholders. Enter your private MySQL username/password in that file. Existing local credentials are never overwritten." />
@@ -508,6 +521,10 @@
   <Target Name="EnsurePrivateHubtelConfiguration" BeforeTargets="BeforeBuild" Condition="!Exists('$(MSBuildProjectDirectory)\Hubtel.Private.config')">
     <Copy SourceFiles="$(MSBuildProjectDirectory)\Hubtel.Private.config.example" DestinationFiles="$(MSBuildProjectDirectory)\Hubtel.Private.config" />
     <Message Importance="High" Text="Created private Hubtel configuration with blank credentials; existing credentials are never overwritten. Live testing remains pending until the operator configures and authorises the account." />
+  </Target>
+  <Target Name="EnsureProductionConfiguration" BeforeTargets="BeforeBuild" Condition="!Exists('$(MSBuildProjectDirectory)\Web.Production.config')">
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\Web.Production.config.example" DestinationFiles="$(MSBuildProjectDirectory)\Web.Production.config" />
+    <Message Importance="High" Text="Created the missing production configuration with safe placeholders. Existing private hosting settings are never overwritten. Configure the actual hosting account privately before deployment." />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

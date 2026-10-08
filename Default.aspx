@@ -111,8 +111,7 @@
         .civic-faq-intro a { color:var(--civic-blue); font-size:11px; font-weight:700; text-decoration:none; }
         .civic-faq details { border-top:1px solid #dce4ef; padding:17px 0; }
         .civic-faq details:last-child { border-bottom:1px solid #dce4ef; }
-        .civic-faq summary { cursor:pointer; list-style:none; position:relative; padding-right:30px; color:var(--civic-navy); font:600 15px Georgia,serif; }
-        .civic-faq summary::-webkit-details-marker { display:none; }
+        .civic-faq summary { cursor:pointer; list-style:none; display:block; position:relative; padding-right:30px; color:var(--civic-navy); font:600 15px Georgia,serif; }
         .civic-faq summary:after { content:"+"; position:absolute; right:2px; top:-4px; color:#1b4f91; font:24px Georgia,serif; }
         .civic-faq details[open] summary:after { content:"−"; }
         .civic-faq details p { margin:11px 28px 0 0; color:var(--civic-muted); font-size:12px; line-height:1.8; }
